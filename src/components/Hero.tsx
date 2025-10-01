@@ -1,4 +1,4 @@
-import logo from "@/assets/guteborg-logo.jpeg";
+import logo from "@/assets/guteborg-logo.png";
 
 const Hero = () => {
   return (
