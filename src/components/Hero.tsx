@@ -1,4 +1,4 @@
-import { Crown } from "lucide-react";
+import logo from "@/assets/guteborg-logo.jpeg";
 
 const Hero = () => {
   return (
@@ -6,8 +6,8 @@ const Hero = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-secondary/30" />
       
       <div className="container mx-auto px-4 text-center relative z-10">
-        <div className="inline-block mb-8 p-6 rounded-full bg-primary/10 animate-pulse">
-          <Crown className="w-20 h-20 text-primary" strokeWidth={1.5} />
+        <div className="inline-block mb-8">
+          <img src={logo} alt="Guteborg AB Logo" className="w-32 h-32 md:w-40 md:h-40 object-contain" />
         </div>
         
         <h1 className="text-5xl md:text-7xl font-bold mb-6 text-primary">
