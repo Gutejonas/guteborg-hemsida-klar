@@ -41,7 +41,7 @@ const ContactSection = () => {
           </a>
 
           <a
-            href="https://www.linkedin.com/company/guteborg-ab"
+            href="https://www.linkedin.com/company/guteborg/"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-start gap-4 p-6 rounded-lg bg-card hover:bg-secondary transition-all duration-300 transform hover:scale-105 border border-border group"
@@ -51,7 +51,7 @@ const ContactSection = () => {
             </div>
             <div className="text-left">
               <h3 className="font-semibold text-primary mb-1">LinkedIn</h3>
-              <p className="text-foreground/80">Guteborg AB</p>
+              <p className="text-foreground/80">Guteborg Sverige AB</p>
             </div>
           </a>
 
