@@ -16,6 +16,8 @@ type Translations = {
     p1: string;
     p2: string;
     p3: string;
+    p4: string;
+    p5: string;
   };
   services: {
     title: string;
@@ -47,9 +49,11 @@ const translations: Record<Language, Translations> = {
     },
     about: {
       title: "Om oss",
-      p1: "Guteborg Sverige AB är ett konsultbolag som hjälper organisationer att utvecklas, växa och nå sina mål. Vi kombinerar djup branschkunskap med ett personligt engagemang för att leverera värdeskapande lösningar.",
-      p2: "Vår filosofi bygger på långsiktiga relationer, professionalism och en stark värdegrund. Vi strävar efter att skapa mervärde i varje uppdrag vi tar oss an.",
-      p3: "Med en kombination av erfarenhet, expertis och passion arbetar vi för att vara en pålitlig partner för både privata och offentliga aktörer.",
+      p1: "Guteborg Sverige AB stödjer organisationer i att åstadkomma verklig och varaktig förändring i teknikdrivna och kunskapsintensiva miljöer. Vår kärnkompetens är ledarskap i komplexitet – där strategi, teknik, organisation och människor måste röra sig tillsammans för att resultat ska kunna förverkligas.",
+      p2: "Bolaget leds av Jonas Lindblom, en internationellt erfaren ledare och förändringsagent med bakgrund från globala organisationer inom telekom, fintech, fordonsindustri och digital handel.",
+      p3: "Vi kombinerar djup branschkunskap med ett personligt engagemang för att leverera värdeskapande lösningar till våra kunder.",
+      p4: "Vår filosofi bygger på långsiktiga relationer, professionalism och en stark värdegrund. Vi strävar efter att skapa mervärde i varje uppdrag vi tar oss an.",
+      p5: "Med en kombination av erfarenhet, expertis och passion arbetar vi för att vara en pålitlig partner för både privata och offentliga aktörer.",
     },
     services: {
       title: "Vad vi gör",
@@ -83,9 +87,11 @@ const translations: Record<Language, Translations> = {
     },
     about: {
       title: "About us",
-      p1: "Guteborg Sverige AB is a consulting firm that helps organisations evolve, grow and reach their goals. We combine deep industry knowledge with personal commitment to deliver value-creating solutions.",
-      p2: "Our philosophy is built on long-term relationships, professionalism and a strong set of values. We strive to create added value in every engagement we take on.",
-      p3: "With a combination of experience, expertise and passion, we work to be a trusted partner for both private and public clients.",
+      p1: "Guteborg Sverige AB supports organizations in delivering real, lasting change in technology-driven and knowledge-intensive environments. Our core capability is leadership in complexity—where strategy, technology, organization, and people must move together for results to materialize.",
+      p2: "The company is led by Jonas Lindblom, an internationally experienced leader and change agent with a background from global organizations within telecom, fintech, automotive, and digital commerce.",
+      p3: "We combine deep industry knowledge with personal commitment to deliver value-creating solutions to our clients.",
+      p4: "Our philosophy is built on long-term relationships, professionalism and a strong set of values. We strive to create added value in every engagement we take on.",
+      p5: "With a combination of experience, expertise and passion, we work to be a trusted partner for both private and public clients.",
     },
     services: {
       title: "What we do",
