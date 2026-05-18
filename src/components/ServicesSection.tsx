@@ -1,42 +1,25 @@
-import { Building2, Users, Heart } from "lucide-react";
+import { Compass, Users, TrendingUp } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
-const services = [
-  {
-    icon: Building2,
-    title: "Fastigheter",
-    subtitle: "Utbud",
-    description: "Vi erbjuder ett brett utbud av fastighetstjänster, från förvaltning till utveckling och rådgivning inom fastighetssektorn.",
-  },
-  {
-    icon: Users,
-    title: "Konsult",
-    subtitle: "Våra tjänster",
-    description: "Professionella konsulttjänster anpassade efter era behov. Vi hjälper er att nå era mål genom strategisk rådgivning och praktiskt stöd.",
-  },
-  {
-    icon: Heart,
-    title: "Kultur",
-    subtitle: "Värdegrunden",
-    description: "Kultur och värderingar är kärnan i vår verksamhet. Vi stödjer kulturella initiativ och arbetar för att skapa värde för samhället.",
-  },
-];
+const icons = [Compass, Users, TrendingUp];
 
 const ServicesSection = () => {
+  const { t } = useLanguage();
   return (
     <section id="vad-vi-gor" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-primary">
-            Vad vi gör
+            {t.services.title}
           </h2>
           <p className="text-lg text-foreground/80 max-w-2xl mx-auto">
-            Tre kärnområden där vi levererar professionella lösningar
+            {t.services.intro}
           </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {services.map((service, index) => {
-            const Icon = service.icon;
+          {t.services.items.map((service, index) => {
+            const Icon = icons[index];
             return (
               <div
                 key={index}
