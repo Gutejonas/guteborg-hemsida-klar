@@ -1,15 +1,17 @@
 import { Mail, Phone, Linkedin, MapPin } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const ContactSection = () => {
+  const { t } = useLanguage();
   return (
     <section id="kontakt" className="py-20 bg-gradient-to-b from-background to-secondary/30">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-primary">
-            Kontakta oss
+            {t.contact.title}
           </h2>
           <p className="text-lg text-foreground/80">
-            Vi ser fram emot att höra från dig
+            {t.contact.intro}
           </p>
         </div>
 
@@ -22,7 +24,7 @@ const ContactSection = () => {
               <Mail className="w-6 h-6 text-primary" />
             </div>
             <div className="text-left">
-              <h3 className="font-semibold text-primary mb-1">E-post</h3>
+              <h3 className="font-semibold text-primary mb-1">{t.contact.email}</h3>
               <p className="text-foreground/80">guteborgab@gmail.com</p>
             </div>
           </a>
@@ -35,7 +37,7 @@ const ContactSection = () => {
               <Phone className="w-6 h-6 text-primary" />
             </div>
             <div className="text-left">
-              <h3 className="font-semibold text-primary mb-1">Telefon</h3>
+              <h3 className="font-semibold text-primary mb-1">{t.contact.phone}</h3>
               <p className="text-foreground/80">0725 20 90 96</p>
             </div>
           </a>
@@ -50,8 +52,8 @@ const ContactSection = () => {
               <Linkedin className="w-6 h-6 text-primary" />
             </div>
             <div className="text-left">
-              <h3 className="font-semibold text-primary mb-1">LinkedIn</h3>
-              <p className="text-foreground/80">Guteborg Sverige AB</p>
+              <h3 className="font-semibold text-primary mb-1">{t.contact.linkedin}</h3>
+              <p className="text-foreground/80">{t.contact.linkedinValue}</p>
             </div>
           </a>
 
@@ -60,8 +62,8 @@ const ContactSection = () => {
               <MapPin className="w-6 h-6 text-primary" />
             </div>
             <div className="text-left">
-              <h3 className="font-semibold text-primary mb-1">Plats</h3>
-              <p className="text-foreground/80">Sverige</p>
+              <h3 className="font-semibold text-primary mb-1">{t.contact.location}</h3>
+              <p className="text-foreground/80">{t.contact.locationValue}</p>
             </div>
           </div>
         </div>
