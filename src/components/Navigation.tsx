@@ -1,10 +1,13 @@
 import { useState, useEffect } from "react";
 import { Button } from "./ui/button";
 import { Menu, X } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -37,36 +40,40 @@ const Navigation = () => {
         </button>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex gap-8">
+        <div className="hidden md:flex items-center gap-8">
           <button
             onClick={() => scrollToSection("om-oss")}
             className="text-foreground hover:text-primary transition-colors"
           >
-            Om oss
+            {t.nav.about}
           </button>
           <button
             onClick={() => scrollToSection("vad-vi-gor")}
             className="text-foreground hover:text-primary transition-colors"
           >
-            Vad vi gör
+            {t.nav.services}
           </button>
           <button
             onClick={() => scrollToSection("kontakt")}
             className="text-foreground hover:text-primary transition-colors"
           >
-            Kontakt
+            {t.nav.contact}
           </button>
+          <LanguageSwitcher className="ml-2 border-l border-border pl-4" />
         </div>
 
         {/* Mobile Menu Button */}
-        <Button
-          variant="ghost"
-          size="icon"
-          className="md:hidden text-primary"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        >
-          {isMobileMenuOpen ? <X /> : <Menu />}
-        </Button>
+        <div className="flex items-center gap-2 md:hidden">
+          <LanguageSwitcher />
+          <Button
+            variant="ghost"
+            size="icon"
+            className="text-primary"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? <X /> : <Menu />}
+          </Button>
+        </div>
       </div>
 
       {/* Mobile Menu */}
@@ -77,19 +84,19 @@ const Navigation = () => {
               onClick={() => scrollToSection("om-oss")}
               className="text-left text-foreground hover:text-primary transition-colors py-2"
             >
-              Om oss
+              {t.nav.about}
             </button>
             <button
               onClick={() => scrollToSection("vad-vi-gor")}
               className="text-left text-foreground hover:text-primary transition-colors py-2"
             >
-              Vad vi gör
+              {t.nav.services}
             </button>
             <button
               onClick={() => scrollToSection("kontakt")}
               className="text-left text-foreground hover:text-primary transition-colors py-2"
             >
-              Kontakt
+              {t.nav.contact}
             </button>
           </div>
         </div>
