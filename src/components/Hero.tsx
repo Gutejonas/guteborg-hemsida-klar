@@ -9,7 +9,7 @@ const Hero = () => {
       
       <div className="container mx-auto px-4 text-center relative z-10">
         <div className="inline-block mb-8">
-          <img src={logo} alt={t.hero.logoAlt} className="w-32 h-32 md:w-40 md:h-40 object-contain" />
+          <img src={logo} alt={t.hero.logoAlt} className="w-32 h-32 md:w-40 md:h-40 object-contain rounded-full border border-primary p-1" />
         </div>
         
         <h1 className="text-5xl md:text-7xl font-bold mb-6 text-primary">
